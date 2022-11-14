@@ -55,9 +55,9 @@ class ZEDM():
             # get numpy arrays of data so we can use imshow()
             np_left = left_img.get_data()
             np_right = right_img.get_data()
+            concat_horizontal = np.concatenate((np_left, np_right), axis=1)
 
-            cv.imshow('left', np_left)
-            cv.imshow('right', np_right)
+            cv.imshow('left', concat_horizontal)
 
             cv.waitKey(-1)
 
